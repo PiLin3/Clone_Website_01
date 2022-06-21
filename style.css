@@ -1,0 +1,258 @@
+body {
+  background-color: #181818;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  transition: all 250ms ease-out;
+}
+.float_container {
+  background-color: #303030;
+  left: 0%;
+  top: 0%;
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+.float_container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.float_container > img {
+  width: 50px;
+  margin: 5px;
+  float: left;
+}
+.float_container > p {
+  display: block;
+  float: left;
+  color: #218cdd;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0;
+}
+.nav_items {
+  margin: 0px;
+}
+.nav_items li {
+  list-style: none;
+  float: right;
+  margin: 0px;
+  padding: 0px;
+}
+.nav_items li a {
+  color: white;
+  display: block;
+  margin: 0px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #303030;
+}
+.nav_items li a:hover {
+  color: #218cdd;
+  background-color: #696969;
+}
+.main_content {
+  margin-top: 68px;
+}
+.main_content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main_content a {
+  display: block;
+  float: left;
+  margin-left: 2.4%;
+  margin-top: 1.6%;
+  padding: 0;
+  width: 22%;
+  box-shadow: 0 0 16px #00000040;
+}
+.main_content a:hover {
+  background-color: #3d3d3d1d;
+  box-shadow: 0 0 16px #e8e8e822;
+}
+.main_content a:active{
+  box-shadow: 0 0 0;
+}
+.main_content a img {
+  width: 100%;
+  display: block;
+}
+.text_content p {
+  margin: 1.6% 2.5% 0%;
+}
+.line_br {
+  margin: 3.2%;
+  border: 1px solid #303030;
+  background-color: #303030;
+}
+.main_footer {
+  margin-left: 1.6%;
+}
+.footer_Box {
+  float: left;
+  width: 19.5%;
+  margin-left: 4%;
+  margin-bottom: 3.2%;
+}
+.footer_Box p {
+  width: 60%;
+  font-size: 125%;
+  text-align: left;
+  padding-bottom: 4%;
+  margin: 0;
+  white-space: nowrap;
+}
+.footer_Box ul {
+  padding: 0%;
+  margin-top: 2%;
+  list-style: none;
+}
+.footer_Box ul li {
+  margin-bottom: 2%;
+}
+.footer_Box a {
+  color: #696969;
+  width: 60%;
+  text-align: left;
+  padding: 2%;
+  margin: auto;
+}
+.main_footer > div a:hover {
+  color: #218cdd;
+}
+.footer_email_form {
+  float: left;
+  width: 19.5%;
+  margin: 0% 0% 3.2% 4%;
+}
+.footer_email_form label {
+  width: 60%;
+  font-size: 125%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+#email {
+  background-color: #696969;
+  color: #ffffff;
+  text-align: left;
+  padding: 2%;
+  margin: 10% auto 8%;
+  border: 2px solid #252525;
+  outline: 0;
+}
+::placeholder {
+  color: #c0c0c0;
+}
+#footer_email_submit {
+  background-color: #696969;
+  color: #c0c0c0;
+  border: 0px;
+  font-size: 90%;
+  padding: 2.5%;
+}
+#footer_email_submit:hover {
+  background-color: #252525;
+  color: #218cdd;
+  box-shadow: 2.5px 2.5px #0000006b;
+}
+#footer_email_submit:active {
+  background-color: #565656;
+  box-shadow: 0px 0px;
+}
+@media screen and (max-width: 768px) {
+  .float_container > img {
+    width: 44px;
+    margin: 4.2px;
+    float: left;
+  }
+  .float_container > p {
+    display: none;
+  }
+  .nav_items li a {
+    padding: 14.5px;
+  }
+  .main_content a {
+    margin-left: 2.5%;
+    width: 28%;
+  }
+  .main_footer div:nth-child(2) {
+    display: none;
+    background-color: aqua;
+  }
+  .footer_Box {
+    width: 30%;
+    margin-left: 2%;
+  }
+  .footer_email_form {
+    margin: 0% 0% 4% 0%;
+  }
+}
+@media screen and (max-width: 548px) {
+  /*Drop dwon menu*/
+  .float_container > img {
+    width: 32px;
+    margin: 4px;
+  }
+  .menu_nav {
+    position: absolute;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    right: 0%;
+    background: url(images/menu.png) no-repeat 100% center;
+    cursor: pointer;
+  }
+  .nav_items {
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 0px;
+    height: 0;
+  }
+  .nav_items.open {
+    height: auto;
+  }
+  .nav_items li {
+    float: none;
+    text-align: right;
+    display: block;
+  }
+  .nav_items li a {
+    padding: 14.5px 12px;
+    background-color: #3b3b3b;
+    border-bottom: 1px solid #1f1f1f;
+  }
+  /*End*/
+  .main_content {
+    margin-top: 40px;
+  }
+  .main_content a {
+    margin-top: 2.5%;
+    width: 44.25%;
+  }
+  .footer_Box {
+    width: 47%;
+  }
+  .footer_email_form {
+    margin: 4% 5% 4% 5%;
+    width: 90%;
+  }
+  .footer_email_form p {
+    text-align: center;
+    width: 100%;
+  }
+  #footer_email {
+    text-align: left;
+    width: 65%;
+    padding: 2%;
+    margin: 0%;
+  }
+}
